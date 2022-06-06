@@ -49,7 +49,7 @@ function buildProfileElement() {
     
     //artist 
         let nameElement = document.createElement('div');
-        nameElement.classList.add('name');
+        nameElement.classList.add('artist');
         nameElement.innerText = `Artist: ${artist}`;
         myTunes.appendChild(nameElement);
         console.log(nameElement);
