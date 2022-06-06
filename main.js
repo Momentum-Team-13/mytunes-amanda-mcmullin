@@ -32,7 +32,7 @@ function buildProfileLoop(songs) {
         }
     }
     
-function buildProfileElement(itemProfile) {
+function buildProfileElement() {
     //album cover
         let coverElement = document.createElement('img');
         coverElement.classList.add('cover');
