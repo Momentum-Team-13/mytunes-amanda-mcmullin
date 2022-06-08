@@ -8,18 +8,18 @@ You'll use artist data from the API to display song titles, and then allow the u
 
 Here are the steps you'll need to take in order to complete this project.
 
-[] 1. Build a form that has an `<input>` where a user can type in the name of a band or an artist.
-[] 2. When the user types their search term and presses the submit button (or presses Enter), make the search request to the API.
-[] 3. When the API returns a response, use the results to display a listing of songs related to the search term.
+[x] 1. Build a form that has an `<input>` where a user can type in the name of a band or an artist.
+[x] 2. When the user types their search term and presses the submit button (or presses Enter), make the search request to the API.
+[x] 3. When the API returns a response, use the results to display a listing of songs related to the search term.
 [] 4. When a user clicks a song in your listing, the song should play in an `<audio>` tag that you've also added to the page (see [the mockup](musicapp.jpg)).
 
 ## Product Requirements
 
-[] - A user can search for songs by artist or band name.
-[] - Validate the input so that a search request is not sent with no search term.
+[x] - A user can search for songs by artist or band name.
+[x] - Validate the input so that a search request is not sent with no search term.
 [] - Display the search results without reloading the page.
-[] - The results should include song details. You must include the song title, but the data you'll get back from the API has other info you can consider including, like artist name, album title, album image, and release date.
-[] - The number of results you show is up to you. If no results are returned from a search, your UI should communicate this to the user in a clear way (how you do this is up to you).
+[x] - The results should include song details. You must include the song title, but the data you'll get back from the API has other info you can consider including, like artist name, album title, album image, and release date.
+[x] - The number of results you show is up to you. If no results are returned from a search, your UI should communicate this to the user in a clear way (how you do this is up to you).
 [] - You should handle responses from the server that are not in the 200 range in your javascript and also in your UI (for instance, you can show an error message and ask the user to repeat their search).
 [] - Allow the user to click on a song title to play a song preview.
 [] - Your application should be nicely styled, with thought given to the user experience (that is, it should be easy for your user to interact with).
@@ -36,7 +36,7 @@ There will be some new concepts you'll need to work through on this project, so 
 [x] - Read through the documentation before getting started. Everything you'll need to know is in there.
 [x] - Use Insomnia to make requests to the API to test out the URLs you will need to construct and see data that is returned.
 [] - Playing a song preview
-[] - You'll need to research the `<audio>` tag for this part - [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
+[x] - You'll need to research the `<audio>` tag for this part - [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
 
 **NOTE**: The iTunes API can be a little flaky when it comes to returning CORS headers. These headers are necessary for Ajax to work correctly. If you have any problems, you can use a proxy we've set up. Replace `https://itunes.apple.com/` in the API URL with `https://proxy-itunes-api.glitch.me/`.
 
