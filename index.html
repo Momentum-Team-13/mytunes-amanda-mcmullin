@@ -2,38 +2,30 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="main.js" defer></script>
-  <title>myTunes Music Search</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>myTunes Music Search</title>
 </head>
 
 <body>
-  <h1>myTunes - A Really Awesome Music Site</h1>
+    <h1>myTunes - A Really Awesome Music Site</h1>
 
-  <div>
-    <audio controls src="" id="audioPlayer">
-      Your browswer does not support the <code>audio</code> element.
-    </audio>
-    <p id="nowPlaying">Now Playing: </p>
-  </div>
-
+    <audio controls ></audio>
+    
 <!-- validation: input is required for submission -->
-<!-- use a label - screen reader will read label, aid in accessibility; ?does label need name and id? -->
-  <form id="myForm">
-    <label>
-      <input type="text" name ="searchBox" id="searchBox" placeholder="Search for Artist" size=45 required>
-    </label>
-    <button id="searchButton">Search</button>
-  </form>
+    <form>
+        <input type="text" id="searchBox" placeholder="Search for Artist" size=45 required="required">
+        <button id="searchButton">Search</button>
+    </form>
 
-  <br>
-  <br>
+    <br>
+    <br>
 
-  <p id="returnedResults">Search Results:</p>
-  
-  <div id="myTunes"></div>
+    <h3 id="nowPlaying"></h3>
+
+    <div id="myTunes"></div>
 </body>
 
 </html>
