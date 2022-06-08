@@ -1,3 +1,59 @@
-.cover {
-    padding: 10px 10px;
+body {
+    background-color: #c4dbd9;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+audio {
+    padding: 20px;
+}
+
+div {
+    display: grid;
+    justify-content: center;
+    max-width: fit-content;
+}
+
+#myTunes {
+    width: auto;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#nowPlaying {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.songCardInfo {
+    border: 1px solid black;
+    max-width: 25%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #edede9;
+    margin: 15px;
+    padding: 15px;
+}
+
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+    padding: 5px;
 }

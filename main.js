@@ -14,10 +14,9 @@ searchButton.addEventListener('click', (event) => {
     event.preventDefault()
     myTunes.innerHTML = ""
     console.log(searchBox.value);
-    console.log(event)
     let userInput = searchBox.value;
-    let userSearch = `https://itunes.apple.com/search?term=${userInput}&entity=song`
-    console.log(userSearch)
+    // let userSearch = `https://itunes.apple.com/search?term=${userInput}&entity=musicArtist&limit=25`
+    let userSearch = `https://itunes.apple.com/search?term=${userInput}&limit=20&music=musicArtist`
 
 //fetch request to iTunes API 
     fetch (userSearch, {
@@ -28,10 +27,10 @@ searchButton.addEventListener('click', (event) => {
             return response.json();
         })
         .then(function (data) {
-            console.log("api results: ",data.results);
+            console.log("Api results: ",data.results);
 
             if (data.results.length < 1) {
-                let noResultsElement = document.createElement('div')
+                let noResultsElement = document.createElement('p')
                 noResultsElement.innerText = "Sorry, no results were found."
                 noResultsElement.classList.add = ("noResults")
                 myTunes.appendChild(noResultsElement)
@@ -56,8 +55,7 @@ searchButton.addEventListener('click', (event) => {
                 searchElement.appendChild(coverElement);      
             
                 coverElement.addEventListener("click", (event) => {
-                    
-                    console.log("Play the song!");
+                    // console.log("Play the song!");
                     let sound = document.querySelector('audio');
                     sound.id = 'audio=player';
                     sound.controls = 'controls';
@@ -84,6 +82,7 @@ searchButton.addEventListener('click', (event) => {
                 myTunes.appendChild(searchElement)
             }
         })
+        //catch the errors!
         .catch(err => {
             window.alert("Error detected. Please try again.");
         })
