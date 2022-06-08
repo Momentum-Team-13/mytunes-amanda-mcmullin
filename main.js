@@ -1,8 +1,9 @@
+
 //connected
 //console.log('Is this thing on?')
 
 //create main box for data
-const myTunes = document.querySelector('.myTunes');
+const myTunes = document.querySelector('#myTunes');
 
 //variables
 const iTunesURL = 'https://proxy-itunes-api.glitch.me/search?term=jack+johnson&limit=25';

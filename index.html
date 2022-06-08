@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
-  <title>myTunes</title>
+  <title>Music Search</title>
 </head>
 
 <body>
-  <header>
+  <div id="myTunes">
     <h1>myTunes - A Really Awesome Music Site</h1>
-    <input type="button" value="Search for Artist                                 ">
-    <button>Search</button>
-  </header>
-  
-  <div class="searchResults">
-    <h3>Search Results:</h3>
-  </div>
 
-  <div class="myTunes"></div>
+    <audio controls src="" id="audioPlayer">
+      Your browswer does not support the <code>audio</code> element.
+    </audio>
+    <p id="nowPlaying">Now Playing: </p>
+
+    <form class="search" id="myForm">
+        <input type="text" id="searchBox" placeholder="Search for Artist" size=45 required>
+        <button type="submit" id="searchButton">Search</button>
+    </form>
+    <br>
+    <br>
+    <p id="returnedResults">Search Results:</p>
+    <div id="resultsBox"></div>
+  </div>
 </body>
 
 </html>
