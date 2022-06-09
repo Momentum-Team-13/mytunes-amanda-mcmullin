@@ -22,7 +22,7 @@ Here are the steps you'll need to take in order to complete this project.
 [x] - The number of results you show is up to you. If no results are returned from a search, your UI should communicate this to the user in a clear way (how you do this is up to you).
 [x] - You should handle responses from the server that are not in the 200 range in your javascript and also in your UI (for instance, you can show an error message and ask the user to repeat their search).
 [x] - Allow the user to click on a song title to play a song preview.
-[] - Your application should be nicely styled, with thought given to the user experience (that is, it should be easy for your user to interact with).
+[x] - Your application should be nicely styled, with thought given to the user experience (that is, it should be easy for your user to interact with).
 
 ### Setup with `npm`
 

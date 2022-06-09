@@ -9,43 +9,45 @@ const searchButton = document.querySelector("#searchButton");
 const searchBox = document.querySelector("#searchBox");
 
 
-//event listener for search click/return 
+//event listener for search button 
 searchButton.addEventListener('click', (event) => {
-    event.preventDefault()
-    myTunes.innerHTML = ""
-    console.log(searchBox.value);
+    event.preventDefault();
+    myTunes.innerHTML = "";
+    // console.log(searchBox.value);
     let userInput = searchBox.value;
-    // let userSearch = `https://itunes.apple.com/search?term=${userInput}&entity=musicArtist&limit=25`
-    let userSearch = `https://itunes.apple.com/search?term=${userInput}&limit=20&music=musicArtist`
+    let userSearch = `https://itunes.apple.com/search?term=${userInput}&limit=20&music=musicArtist`;
 
 //fetch request to iTunes API 
     fetch (userSearch, {
         method: 'GET',
         headers: {'Content-Type': 'application/json'}
     })
-        .then(function (response) {
+        .then(function(response) {
             return response.json();
         })
-        .then(function (data) {
-            console.log("Api results: ",data.results);
+        .then(function(data) {
+            console.log("API returned results: ", data.results);
 
+            //if no results are returned let user know
             if (data.results.length < 1) {
-                let noResultsElement = document.createElement('p')
-                noResultsElement.innerText = "Sorry, no results were found."
-                noResultsElement.classList.add = ("noResults")
-                myTunes.appendChild(noResultsElement)
-            }
-            if (data.results.length > 0) {
-                let playElement = document.createElement('div')
-                playElement.innerText = "Click Album Cover to Play"
-                playElement.classList.add = ("nowPlaying")
-                nowPlaying.appendChild(playElement)
+                let noResultsElement = document.createElement('p');
+                noResultsElement.innerText = "Sorry, no results were found.";
+                noResultsElement.classList.add = ("noResults");
+                myTunes.appendChild(noResultsElement);
             }
 
+            if (data.results.length > 0) {
+                let playElement = document.createElement('div');
+                playElement.innerText = "Song preview available when album cover is clicked!";
+                playElement.classList.add = ("nowPlaying");
+                nowPlaying.appendChild(playElement);
+            }
+
+            //create elements for each returned song
             for (let item of data.results) {
                 //album/song/artist card info
-                let searchElement = document.createElement('div')
-                searchElement.classList.add("songCardInfo")
+                let searchElement = document.createElement('div');
+                searchElement.classList.add("songCardInfo");
 
             //album cover    
                 let coverElement = document.createElement('img');
@@ -61,7 +63,7 @@ searchButton.addEventListener('click', (event) => {
                     sound.controls = 'controls';
                     sound.src = `${item.previewUrl}`;
                     sound.type = 'audio/mpeg';
-                    nowPlaying.innerText = `To hear a preview, click the album cover. \n Now Playing: ${item.trackName} by ${item.artistName}`;
+                    nowPlaying.innerText = `Now Playing: ${item.trackName} by ${item.artistName} \n \n To hear a different preview, click another album cover!`;
                 })
 
             //song title
@@ -78,7 +80,7 @@ searchButton.addEventListener('click', (event) => {
                 searchElement.appendChild(nameElement);
                 // console.log(nameElement);
             
-                //append all the things!!!    
+            //append all the things!!!    
                 myTunes.appendChild(searchElement)
             }
         })

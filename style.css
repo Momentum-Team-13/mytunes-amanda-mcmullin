@@ -1,7 +1,6 @@
 body {
     background-color: #c4dbd9;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 h1 {
@@ -42,18 +41,23 @@ p {
 
 .songCardInfo {
     border: 1px solid black;
-    max-width: 25%;
+    max-width: 45%;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #edede9;
-    margin: 15px;
-    padding: 15px;
+    background-color: #fbfefb;
+    margin:  40px 15px 15px 15px;
+    padding: 45px;
+    font-size: larger;
 }
 
 
 img {
     max-width: 100px;
     max-height: 100px;
-    padding: 5px;
+    padding: 20px 25px;
+}
+
+.song {
+    margin-bottom: 20px;
 }
